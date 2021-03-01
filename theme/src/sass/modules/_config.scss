@@ -1,0 +1,135 @@
+$main-width: 75%;
+$primary-color: #444;
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.9;
+$base-transparancy: 0.2;
+$footer-font: 'PT Serif Caption', serif;
+$font: 'PT Serif Caption', serif;
+$footer-font-size: 1rem;
+$magicNumber: 22px;
+$fontSizeBody: 18px;
+
+// Default site animation
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+// Sets different backgound rules deppendnig on $show-home-image
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+
+
+// $base-font-size: 1rem;
+// $base-line-height: $base-font-size * 1.25;
+// $type-scale: (
+//   -1: 0.75rem,
+//   0: 1rem,
+//   1: 1.5rem,
+//   2: 6rem
+// );
+// $line-heights: (
+//   -1: $base-line-height,
+//   0: $base-line-height,
+//   1: $base-line-height * 1.5,
+//   2: $base-line-height * 6
+// );
+// @function type-scale-f($level) {
+//   @return map-get($type-scale, $level);
+// }
+// @function line-height-f($level) {
+//   @return map-get($line-heights, $level);
+// }
+// @mixin type-setting($level: 0) {
+//   font-size: type-scale-f($level);
+//   line-height: line-height-f($level);
+// }
+
+
+// Calculates transparancy
+@function calculate-transparency($color) {
+  @if (lightness($color) > 40) {
+    @return $base-transparancy + 0.2;
+  } @else {
+    @return $base-transparancy;
+  }
+}
+
+@function start-minimize($main-width) {
+  @if ($main-width <= 95%) {
+    @return 5%; 
+  } @else {
+    @return (100 - $main-width) / 2 ;
+  }
+}
+
+@mixin mediaC {
+  @media screen and (max-width: 203px) {
+    @content;
+  }
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaBetween {
+  @media screen and (max-width: 880px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin XLscreen {
+  @media screen and (min-width: 2900px) {
+    @content;
+  }
+}

@@ -1,0 +1,30 @@
+O:8:"stdClass":7:{s:4:"file";s:19:"blogg/101_bokedo.md";s:7:"section";s:3:"101";s:5:"level";i:2;s:8:"internal";b:0;s:7:"tocable";b:1;s:5:"views";a:3:{s:4:"main";a:4:{s:6:"region";s:4:"main";s:8:"template";s:25:"anax/v2/blog-post/default";s:4:"sort";i:3;s:4:"data";a:8:{s:4:"meta";a:3:{s:4:"type";s:13:"next-previous";s:7:"orderby";s:11:"publishTime";s:10:"orderorder";s:4:"desc";}s:6:"author";a:1:{s:8:"Bew Gorp";a:1:{s:7:"acronym";s:8:"Bew Gorp";}}s:8:"category";a:1:{s:5:"Swift";a:1:{s:3:"key";s:5:"Swift";}}s:9:"published";s:10:"2019-02-09";s:7:"content";s:867:"<h1>Bokedo</h1>
+
+<p>Bokedo är ett enkelt men kraftfullt bokningsverktyg som är enkelt för dig och intuitivt för dina kunder.</p>
+
+<p>Projektet är dedikerat till att spara tid, pengar och förvärv med det bästa online-boknings- och schemaläggningssystemet på jorden.</p>
+
+<p>Jag tillhandahåller även enmansföretag och multinationella företag (plus varje storlek mellan) med ett kraftfullt bokningsverktyg som är otroligt enkelt att använda.</p>
+
+<p>Bookeo kan du spendera mer tid växande intäkter och mindre tid att försöka gräva upp förlorade möten.</p>
+
+<figure class="figure py-3 blogImg">
+<a href="http://www.student.bth.se/~mabn17/dbwebb-kurser/design/me/proj/htdocs/image/projects/project4.jpg"><img src="http://www.student.bth.se/~mabn17/dbwebb-kurser/design/me/proj/htdocs/image/projects/project4.jpg?w=200&h=100" alt=""/></a>
+
+</figure>
+";s:7:"excerpt";s:867:"<h1>Bokedo</h1>
+
+<p>Bokedo är ett enkelt men kraftfullt bokningsverktyg som är enkelt för dig och intuitivt för dina kunder.</p>
+
+<p>Projektet är dedikerat till att spara tid, pengar och förvärv med det bästa online-boknings- och schemaläggningssystemet på jorden.</p>
+
+<p>Jag tillhandahåller även enmansföretag och multinationella företag (plus varje storlek mellan) med ett kraftfullt bokningsverktyg som är otroligt enkelt att använda.</p>
+
+<p>Bookeo kan du spendera mer tid växande intäkter och mindre tid att försöka gräva upp förlorade möten.</p>
+
+<figure class="figure py-3 blogImg">
+<a href="http://www.student.bth.se/~mabn17/dbwebb-kurser/design/me/proj/htdocs/image/projects/project4.jpg"><img src="http://www.student.bth.se/~mabn17/dbwebb-kurser/design/me/proj/htdocs/image/projects/project4.jpg?w=200&h=100" alt=""/></a>
+
+</figure>
+";s:4:"next";a:10:{s:4:"file";s:19:"blogg/100_expect.md";s:7:"section";s:3:"100";s:5:"level";i:0;s:8:"internal";b:0;s:7:"tocable";b:1;s:5:"title";s:6:"Expect";s:11:"publishTime";i:1547852400;s:13:"sectionHeader";N;s:8:"linkable";N;s:5:"route";s:12:"blogg/expect";}s:8:"previous";a:10:{s:4:"file";s:20:"blogg/102_chronos.md";s:7:"section";s:3:"102";s:5:"level";i:2;s:8:"internal";b:0;s:7:"tocable";b:1;s:5:"title";s:7:"Chronos";s:11:"publishTime";i:1551913200;s:13:"sectionHeader";N;s:8:"linkable";N;s:5:"route";s:13:"blogg/chronos";}}}s:11:"article-toc";a:4:{s:6:"region";s:13:"sidebar-right";s:8:"template";s:27:"anax/v2/article-toc/default";s:4:"sort";i:1;s:4:"data";a:2:{s:4:"meta";a:1:{s:4:"type";s:11:"article-toc";}s:10:"articleToc";a:0:{}}}s:11:"block-about";a:5:{s:5:"title";N;s:4:"data";a:2:{s:7:"content";s:1:"
+";s:4:"meta";a:2:{s:4:"type";s:6:"single";s:5:"route";s:13:"./block-about";}}s:6:"region";s:13:"sidebar-right";s:8:"template";s:21:"anax/v2/block/default";s:4:"sort";i:0;}}s:11:"frontmatter";a:4:{s:6:"author";s:8:"Bew Gorp";s:8:"category";a:1:{i:0;s:5:"Swift";}s:9:"published";s:10:"2019-02-09";s:5:"title";s:6:"Bokedo";}}

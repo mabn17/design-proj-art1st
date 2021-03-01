@@ -1,0 +1,139 @@
+/*
+  Dark css
+*/
+
+@import './modules/config';
+
+
+$main-width: 65%;
+$home-image: url(../img/test.jpg);
+$primary-color: #000; // Black
+$secondary-color: #0a8ec2; // Light blue
+$background-opacity: 0.7;
+$font: 'Lato', sans-serif;
+$footer-font: sans-serif;
+
+@import './modules/menu';
+@import './modules/footer';
+@import './shared/layout';
+
+
+/* --------------------- ABOUT ------------------------------------------ */
+.block-me {
+  background: rgba(lighten($primary-color, 5), 0.5);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+  box-shadow: 0 15px 15px rgba(darken($primary-color, 50), 0.2);
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+  'bioimage bio bio'
+  'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    max-width: 100%;
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+    box-shadow: 0 15px 15px rgba(darken($primary-color, 50), 0.2);
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- WORK & PROJECTS ----------------------------------- */
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+/* ------- */
+
+
+
+/* --------------------- STYLECHOOSER -------------------- */
+.route-style {
+  #footer {
+    display: block;
+    visibility: visible;
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+/* --------------------- FOOTER ------------------------------------------ */
+.footer-left { width: 33%; }
+.footer-center { margin-right: 10px; }
+#toggle-footer { display: none; }
+
+.footer-distributed {
+  display: block;
+  visibility: visible;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: lighten($primary-color, 5);
+  border-bottom: $secondary-color 5px solid;
+  box-shadow: 0 15px 15px rgba(darken($primary-color, 50), 0.2);
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- RESPONSIVE  ------------------------------------- */
+@include mediaBetween {
+  .footer-distributed {
+    margin-bottom: 0;
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+@import './shared/mobile';
+@import './modules/grid';
+
+$magicNumber: 22px;
+$fontSizeBody: 18px;
+@import './modules/typo';

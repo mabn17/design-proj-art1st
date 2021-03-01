@@ -1,0 +1,236 @@
+@import 'typo';
+
+// TV's
+$img-rezise: 1.165;
+@include XLscreen {
+    $fontSizeBody: 1.155em;
+    @include activateDefaultTypography;
+
+  body {
+    .menu-btn,
+    .menu-btn * {
+      -webkit-transform: scale($img-rezise + 0.2); /* Saf3.1+, Chrome */
+      -moz-transform: scale($img-rezise + 0.2); /* FF3.5+ */
+      -ms-transform: scale($img-rezise + 0.2); /* IE9 */
+      -o-transform: scale($img-rezise + 0.2); /* Opera 10.5+ */
+      transform: scale($img-rezise + 0.2);
+      padding-right: 2%;
+      padding-top: 0.3%;
+    }
+
+    .close {
+      padding-left: 2%;
+      padding-top: 0.3%;
+    }
+
+    main {
+      -webkit-transform: scale($img-rezise); /* Saf3.1+, Chrome */
+      -moz-transform: scale($img-rezise); /* FF3.5+ */
+      -ms-transform: scale($img-rezise); /* IE9 */
+      -o-transform: scale($img-rezise); /* Opera 10.5+ */
+      transform: scale($img-rezise);
+      margin-top: 14%;
+      margin-bottom: 14%;
+    }
+
+    #footer {
+      font-size: 1.155rem;
+    }
+  }
+
+  .main-outer-wrap {
+    padding-right: 35%;
+    padding-left: 35%;
+  }
+}
+
+// Widescreens
+@include mediaXl {
+  .projects { grid-template-columns: repeat(4, 1fr); }
+  .main-outer-wrap {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  figure screenshot fix-cimg {
+    a { padding: 0.2rem; }
+  }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  .main-wrap,
+  main {
+    padding: 0;
+    padding-top: 4rem !important;
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    h1.lg-heading,
+    h2.lg-heading,
+    h3.lg-heading {
+      font-size: 4rem;
+    }
+
+    .allign-row-end,
+    .allign-row-start {
+      display: block !important;
+    }
+
+    .icons {
+      img {
+        display: inline;
+      }
+    }
+
+    figure {
+      a {
+        display: block;
+      }
+    }
+
+      .icons {
+        a { padding: 0.2rem !important; }
+      }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    // portrait_small.jpg
+    .portrait {
+      background: url('../img/me-x-150.png');
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .about-info {
+    justify-content: center;
+    grid-template-areas:
+    'bioimage'
+    'bio'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
+    grid-template-columns: repeat(1, 1fr);
+
+    .bio-image {
+      grid-area: bioimage;
+      margin: auto;
+      border-radius: 50%;
+      border: $secondary-color 3px solid;
+    }
+
+    .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+    }
+
+    .job-1 {
+      grid-area: job1;
+    }
+
+    .job-2 {
+      grid-area: job2;
+    }
+
+    .job-3 {
+      grid-area: job3;
+    }
+
+    .job {
+      padding: 0.5rem;
+      box-shadow: 0 2.2px 0 rgba(238, 206, 26, 0.2);
+    }
+  }
+
+  .projects {
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .h-100 { height: 100%; }
+  .d-unset-md {
+    a {
+      display: unset !important;
+    }
+  }
+
+  #source {
+    margin-top: -5px;
+  }
+}
+
+@include mediaBetween {
+  $fontSizeBody: 1em;
+  @include activateDefaultTypography;
+  .next { padding-right: 10px; }
+  .previous { padding-left: 10px; }
+
+  .explain-grid,
+  .explain-grid-b {
+    figure {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .main-b-color,
+    .main-color {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+@include mediaSm {
+  .outer-main-wrap {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .projects,
+  .index-content,
+  .explain-grid,
+  .explain-grid-b { grid-template-columns: repeat(1, 1fr) !important; }
+  #something { display: none; }
+
+  .explain-grid { grid-template-areas: 'img' 'main' 'accent' 'font'; }
+  .explain-grid-b { grid-template-areas: 'imgb' 'fontb' 'mainb' 'accentb'; }
+
+  main .icons a { margin: 0; }
+
+  .icons {
+    img {
+      display: unset;
+    }
+  }
+}

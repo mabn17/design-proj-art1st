@@ -1,0 +1,40 @@
+.vgrid {
+  main {
+    background: url('../img/grid_12x60x20-nomargin.png') repeat-y scroll center center;
+    background-size: 100% auto;
+  }
+
+  #footer {
+    background: url('../img/grid_24x30x10-nomargin.png') repeat-y scroll center center;
+    background-size: 100% auto;
+  }
+}
+
+.hgrid {
+  main {
+    background-image: url('../img/magic-number-22px.png');
+    background-size: auto, auto;
+    background-position: revert;
+    color: blue !important;
+  }
+
+  #footer {
+    background-image: url('../img/magic-number-22px.png');
+    background-size: auto, auto;
+    background-position: revert;
+    color: blue !important;
+  }
+}
+
+.hgrid {
+  #bg-img { background-image: none; }
+}
+
+.vgrid {
+  #bg-img {
+    background-image: none;
+  }
+}
+
+.mt-3 { margin-top: 2em; }
+select { max-width: 100%; }

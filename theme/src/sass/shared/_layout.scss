@@ -1,0 +1,337 @@
+@import '../css/normalize.css';
+@import '../fontawsome/scss/fontawesome';
+/* ----------------------- COMMON ----------------------- */
+
+.text-primary { color: set-text-color($primary-color); }
+.text-secondary { color: $secondary-color; }
+.right { float: right; }
+.left { float: left; }
+.py-3 { padding-top: 3em; }
+.next-previous { padding-bottom: 1rem; }
+.hover:hover { text-decoration: underline; }
+.break-me { word-break: break-all; }
+.fix-cimg {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.allign-row-end,
+.allign-row-start {
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+.allign-row-end { justify-content: flex-end; }
+.allign-row-start { justify-content: flex-start; }
+.h-100 { height: 100%; }
+
+.max-w-25 { max-width: $main-width; }
+
+.middle {
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* ----------------------- HTML BODY HEADER & * ---------------------------- */
+
+* {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+
+  a:focus { outline: none; }
+}
+
+body {
+  @include background;
+
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  // font-family: $font;
+  // font-size: 100.01%/1.3;
+  font: 18px/1.22222222 $font;
+  line-height: 1.2;
+}
+
+// Flash message
+.region-flash-message { display: none; }
+
+// Header
+#something {
+  background-image: url(https://cdn130.picsart.com/274471851012211.png?r1024x1024);
+  max-width: 350px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  background-image: left-align; // Keep it..
+  margin-bottom: 30px;
+  border: 1px solid $secondary-color;
+  border-radius: 8px;
+}
+#main-wrap { padding-top: 6rem !important; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.outer-main-wrap {
+  padding-right: ((100 - $main-width) / 2);
+  padding-left: ((100 - $main-width) / 2);
+}
+// Body & Main
+.main-wrap {
+  padding: 4rem;
+  height: 100vh;
+  background: rgba($primary-color, $background-opacity);
+  overflow: auto;
+}
+
+main {
+  min-height: 40vh;
+  padding-bottom: 80px;
+
+  .icons {
+    // margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+      padding-top: 0;
+
+      @include easeOut;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* ----------------------- HEADINGS ---------------------------- */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 22px;
+  font: 18px/1.22222222 $font;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+
+/* --------------------------- INDEX --------------------------- */
+.index-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+main .icons { margin-top: 0; }
+
+/* --------------------------------------------------------------- */
+
+
+/* --------------------------- BLOG & POST --------------------------- */
+.blogImg {
+  margin: 0 !important;
+
+  img { border: 3px set-text-color($primary-color) solid; }
+  a { outline: none; }
+}
+
+.blogImg img:hover {
+  opacity: 0.5;
+  border-color: $secondary-color;
+  transition: all 0.5s ease-out;
+}
+
+.next { float: right; }
+.previous { float: left; }
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- WORK & PROJECTS ----------------------------------- */
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- STYLECHOOSER -------------------- */
+.route-style {
+  background: rgba($primary-color, $background-opacity);
+  min-height: 100vh;
+
+  .region-flash-message {
+    background: rgba($primary-color, $background-opacity);
+    margin: 0;
+
+    p {
+      background: rgba($primary-color, $background-opacity);
+      margin: 0;
+    }
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------------- ABOUT -------------------------------------- */
+.explain-grid,
+.explain-grid-b {
+  figure {
+    max-width: 400px;
+    max-height: 400px;
+    padding: 0;
+    margin: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.explain-grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'main img' 'accent font';
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+
+  .main-color {
+    grid-area: main;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .screenshot { grid-area: img; }
+  .secondary-color { grid-area: accent; }
+  .font-color { grid-area: font; }
+
+  .min {
+    box-shadow: 0 15px 15px rgba(darken($primary-color, 50), 0.2);
+    align-content: center;
+    min-height: 40px;
+  }
+}
+
+.explain-grid-b {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'accentb fontb' 'mainb imgb';
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+
+  .main-b-color {
+    grid-area: mainb;
+    max-width: 400px;
+    max-height: 400px;
+  }
+  .screenshot-b { grid-area: imgb; }
+  .secondary-color-b { grid-area: accentb; }
+  .font-color-b { grid-area: fontb; }
+
+  .min {
+    box-shadow: 0 15px 15px rgba(darken($primary-color, 50), 0.2);
+    align-content: center;
+    min-height: 40px;
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* ----------------------- OTHER ----------------------- */
+button:hover,
+button:focus,
+.button:hover,
+.button:focus { outline: none !important; }
+hr { clear: both !important; }
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- HARDCODED ------------------------------------ */
+
+.main-color { background-color: #000; }
+.secondary-color { background-color: #0a8ec2; }
+.font-color { background-color: set-text-color(#000); }
+.main-b-color { background-color: #444; }
+.secondary-b-color { background-color: #eece1a; }
+.font-b-color { background-color: set-text-color(#444); }

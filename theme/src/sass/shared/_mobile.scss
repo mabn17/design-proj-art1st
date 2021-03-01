@@ -1,0 +1,139 @@
+// Widescreens
+@include mediaXl {
+  .projects { grid-template-columns: repeat(4, 1fr); }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  .main-wrap,
+  main {
+    padding: 0;
+    padding-top: 4rem !important;
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    h1.lg-heading,
+    h2.lg-heading,
+    h3.lg-heading {
+      font-size: 4rem;
+    }
+
+    .allign-row-end {
+      display: block;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+  }
+
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+    // portrait_small.jpg
+    .portrait {
+      background: url('../img/me-x-150.png');
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .about-info {
+    justify-content: center;
+    grid-template-areas:
+    'bioimage'
+    'bio'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
+    grid-template-columns: repeat(1, 1fr);
+
+    .bio-image {
+      grid-area: bioimage;
+      margin: auto;
+      border-radius: 50%;
+      border: $secondary-color 3px solid;
+    }
+
+    .bio {
+      grid-area: bio;
+      font-size: 1.5rem;
+    }
+
+    .job-1 {
+      grid-area: job1;
+    }
+
+    .job-2 {
+      grid-area: job2;
+    }
+
+    .job-3 {
+      grid-area: job3;
+    }
+
+    .job {
+      padding: 0.5rem;
+      box-shadow: 0 2.2px 0 rgba(238, 206, 26, 0.2);
+    }
+  }
+
+  .projects {
+    grid-gap: 0.7rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include mediaBetween {
+  .next { padding-right: 10px; }
+  .previous { padding-left: 10px; }
+
+  .explain-grid,
+  .explain-grid-b {
+    figure {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .main-b-color,
+    .main-color {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+@include mediaSm {
+  .projects,
+  .index-content,
+  .explain-grid,
+  .explain-grid-b { grid-template-columns: repeat(1, 1fr) !important; }
+  #something { display: none; }
+
+  .explain-grid { grid-template-areas: 'img' 'main' 'accent' 'font'; }
+  .explain-grid-b { grid-template-areas: 'imgb' 'fontb' 'mainb' 'accentb'; }
+}

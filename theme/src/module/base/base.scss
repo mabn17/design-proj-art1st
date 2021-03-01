@@ -1,0 +1,121 @@
+/*
+  Light css
+*/
+
+@import 'normalize.css';
+@import 'config';
+@import 'car';
+@import 'menu';
+@import 'footer';
+@import 'shared';
+
+/* ----------------------- HTML BODY HEADER -------------------------------- */
+
+*:not(.btn-light, i) {
+  text-shadow:
+  3px 3px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+.fa-envelope,
+.fa-phone,
+.fa-map-marker,
+.btn-light,
+.btn-dark:hover,
+option,
+select,
+select[name="stylechooser"] { text-shadow: none; }
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- ABOUT -------------------- */
+
+.about-info {
+  max-width: 100%;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'job3 bio bio' 'job1 job2 bioimage';
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+  .job-1 { grid-area: job1; }
+  .job-2 { grid-area: job2; }
+  .job-3 { grid-area: job3; }
+  .job { padding: 1rem; }
+}
+
+.about-info {
+  .bio-image {
+    max-width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* --------------------- BLOG & BLOG POSTS ------------------------------ */
+// .blog-post {
+//   font-size: 1.4rem;
+// }
+
+/* --------------------------------------------------------------- */
+
+
+/* ----------------------- COMMON ----------------------- */
+
+.hvr {
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+/* --------------------------------------------------------------- */
+
+
+@import 'grid';
+@import 'mobile';
+@import 'typo';
+
+$magicNumber: 22px;
+$fontSizeBody: 16px;
+/* ----------------------- RESPONSIVE ----------------------- */
+@include mediaC {
+  $fontSizeBody: 0.8em;
+  @include activateDefaultTypography;
+}
+
+@include mediaMd {
+  .icons {
+    .never {
+      a {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+
+/* --------------------------------------------------------------- */

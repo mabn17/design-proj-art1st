@@ -1,0 +1,171 @@
+O:8:"stdClass":7:{s:4:"file";s:8:"hgrid.md";s:7:"section";s:0:"";s:5:"level";i:0;s:8:"internal";b:0;s:7:"tocable";b:0;s:5:"views";a:2:{s:5:"flash";a:3:{s:6:"region";s:5:"flash";s:8:"template";s:21:"anax/v2/image/default";s:4:"data";a:1:{s:3:"src";s:68:"image/theme/tree.jpg?width=1100&height=150&crop-to-fit&area=0,0,30,0";}}s:4:"main";a:2:{s:8:"template";s:23:"anax/v2/article/default";s:4:"data";a:3:{s:5:"titel";s:2:"Om";s:7:"content";s:6460:"<h1 class="lg-heading pt-g-2">
+    Om
+    <span class="text-secondary">Mig</span>
+</h1>
+
+<h2 class="sm-heading">
+    Bio & Tidigare erfarenheter&#8230;
+</h2>
+
+<h1 class="lg-heading mt-n-6">
+    Teman
+</h1>
+
+<h2 class="text-secondary sm-heading">
+    Dark &#8230;
+</h2>
+
+<div class="block-me mt-n-4">
+<p>
+Dark också sidans default style använder sig av fonten &#8216;Lato&#8217; som är baserad på sans-serif för att göra texten mer läsbart med den mörkare bakgrunden. Sans-serif hjälper också webbplatsen att lyfta fram en mer personlig kännsla.
+</p>
+<p>
+Temats designelement lägger fokus på att lyfta fram olika former och linjer för att guida besökaren runt webbplatsen, detta hjälper till att fånga blicken sammtidigt de inte är för distraherande. Den använder sig av mörkare färger för kvällstider för att underlätta bläddring av sidan sammtidigt den ljusblåa accsentfärgen hjälper till med avskärmningen. Bakgrundsbildens syfte är att lyfta fram en textur så att temat får ett djup och bli mer intressant.</p>
+</p>
+<p>
+Temats designprinsiper fokuserar på att lyfta fram proximitet mellan elementen. De är uppdelade på så sätt att informationen hänger samman i elementen sammtidigt som de innehåller en individuell hirarki.
+</p>
+</div>
+
+<h2 class="text-secondary sm-heading">
+    Light &#8230;
+</h2>
+
+<div class="block-me mt-n-5">
+<p>
+Till skillnad från dark använder light serif fonten &#8216;PT Serif Caption&#8217;, tillsammans med en text-shadow för att man skall få en mer &#8216;flytande&#8217; och lekfull känsla. Skuggan hjälper till att lyfra fram en kontrast som både gör det lättare att se och läsa. Eftersom effekten på serif fonter också blommar ut ju större fonten är så ökas även fontstorleken på blogginläggen där texten ligger i fokus. Nästan allt från temat baserats på olika font betoningar, storlek och färger då temat fokuserar på att vara så minimalistisk som möjligt utan att ta bort någon information eller data.
+</p>
+<p>
+Tanken bakom temat är att det skall vara minimalistisk. Jag använder en kombination av interaktivitet och minimalism för att skapa ett anpassbart tema som avskärmar element som är mindre viktiga. På så sätt får man mer betoningar på den viktigare informationen.
+</p>
+</div>
+
+<h1 class="lg-heading" id="s">
+    Sass <span class="text-secondary">Kod</span> Struktur
+</h1>
+
+<h2 class="sm-heading">
+    Moduler <span class="text-secondary">&</span> Struktur &#8230;
+</h2>
+
+<h2 class="sm-heading" id="a">
+    Min uppdelning &#8230;
+</h2>
+
+<div class="block-me mt-n-9">
+<p>
+Min uppdelning av koden är säkerligen lite mer anurlunda än de andra som har lämnat in projekten då, jag aldrig använde mig av @desinax&#8217;s riktiga bas. Huvudtanken bakom hur jag har strukturerat mina moduler var att göra det så bra som möjligt för just detta projektet.
+</p>
+<p>
+En av de stösta anledningarna varför just min struktur känns bättre är för att för att jag inte använder mig av en massa onödiga moduler och kod som inte användstillsammans med, en massa onödiga variablar då min kod är mer intelligent. Saker som att bara ändra en variabel exempelvis den primära färgen kommer också att ändra olika värden som, vilken genomskilnighet vissa elenent får och vilken färg den primära fonten kommer till att ha. Med hjälp av detta kan man nästan skapa en helt ny upplevelse av att sätta huvudfärgen och accentfärgen. Självklart kommer inte detta att täcka allt med det gör en hel del.
+</p>
+<p>
+Som tidigare nämt innehåller konfigurationsfilen en hel del funktioner och mixins som alla filer använder sig av. För att då den mest konsistenta layouten för responsivitet finns det olika mixins som specifierar olika breakpoinst då elementen uppdateras. <span class="text-secondary">se bilden nedan</span>
+</p>
+
+<p>
+Utöver detta har jag också två stycken moduler i mappen <i>shared</i>. Dessa tar hand om att sätta all grundlayout som delas mellan båda teman då saker som färger, fonter, ikoner och några grids stylas. All den responsiva koden från <i>layout</i> sparas och skrivs in i <i>mobile</i> så att man lättare kan seperera koden för att undvika potentiella krockar. Filen innehåller även responsiv kod för navigationen samt footern då de delar på samma.
+</p>
+<p>
+Det är också mycket fokus på att klasser skall ärva från varanda så att man får mer kontroll över alla element och på det sättet undvika potentiella problem. <span class="text-secondary">se bilden ovan för exempel</span>
+</p>
+Anledningen till att jag valde <span class="text-secondary">Sass</span> över <span class="text-secondary">Less</span> är att sass har bättre syntax då saker som if-statser och for-loopar är mer likt de programmeringsspråk jag är van vid. Less är också lite mer restrikterande då den endast ger en möjligheten att använda mixins under specifika situationer.
+<p>
+Sass har också blivit mer dominant under de senaste åren då styleramverk som twitter bootstrap har bytt tillbaka till från just less till sass.
+</p>
+<p>
+Jag har känner mig också mer bekväm i prepossesorn som jag valde, då, jag har lekt mer med det i andra av mina projekt. Jag nämde tidigare att det inte fanns moduler till sass i desinax därför jobbade jag även med CSS grid samt lite flexbox för att mina element skall uppnå samma kännsla för ramverket gridlayout. Man får mycket mer kontroll med att jobba med de tekniker jag valde, just för att det inte finns samma mängd buggar och är mindre komplext. Jag känner personligen att man behöver kunna dessa saker för att kunna få jobb som en frontend frontendutvecklare och jag är inte ensam med att tycka det.
+</p>
+<p>
+Självklart så finns det också nackdelar med teknikerna och strukturen som jag har valt att använda. Varken <span class="text-secondary">flexbox</span> eller <span class="text-secondary">CSS grid</span> fungerar i de äldre webbläsarna som t.ex IE7 samt vissa versioner av browsers utvecklade för mobiler m.m.
+</p>
+<p>
+Strukturen för modulerna som jag har är bra och inte överkompliserade för detta projektet. Dock så är de inte kanske de mest optimala om man t.ex skall återanvända all <span class="text-secondary">scss</span> kod till något annat projekt. Men med att flytta över <b>hudkoden</b> för både footern och navigationen kan man i alla fall snabbt komma åt det viktigaste.
+</p>
+</div>
+";s:7:"excerpt";s:6460:"<h1 class="lg-heading pt-g-2">
+    Om
+    <span class="text-secondary">Mig</span>
+</h1>
+
+<h2 class="sm-heading">
+    Bio & Tidigare erfarenheter&#8230;
+</h2>
+
+<h1 class="lg-heading mt-n-6">
+    Teman
+</h1>
+
+<h2 class="text-secondary sm-heading">
+    Dark &#8230;
+</h2>
+
+<div class="block-me mt-n-4">
+<p>
+Dark också sidans default style använder sig av fonten &#8216;Lato&#8217; som är baserad på sans-serif för att göra texten mer läsbart med den mörkare bakgrunden. Sans-serif hjälper också webbplatsen att lyfta fram en mer personlig kännsla.
+</p>
+<p>
+Temats designelement lägger fokus på att lyfta fram olika former och linjer för att guida besökaren runt webbplatsen, detta hjälper till att fånga blicken sammtidigt de inte är för distraherande. Den använder sig av mörkare färger för kvällstider för att underlätta bläddring av sidan sammtidigt den ljusblåa accsentfärgen hjälper till med avskärmningen. Bakgrundsbildens syfte är att lyfta fram en textur så att temat får ett djup och bli mer intressant.</p>
+</p>
+<p>
+Temats designprinsiper fokuserar på att lyfta fram proximitet mellan elementen. De är uppdelade på så sätt att informationen hänger samman i elementen sammtidigt som de innehåller en individuell hirarki.
+</p>
+</div>
+
+<h2 class="text-secondary sm-heading">
+    Light &#8230;
+</h2>
+
+<div class="block-me mt-n-5">
+<p>
+Till skillnad från dark använder light serif fonten &#8216;PT Serif Caption&#8217;, tillsammans med en text-shadow för att man skall få en mer &#8216;flytande&#8217; och lekfull känsla. Skuggan hjälper till att lyfra fram en kontrast som både gör det lättare att se och läsa. Eftersom effekten på serif fonter också blommar ut ju större fonten är så ökas även fontstorleken på blogginläggen där texten ligger i fokus. Nästan allt från temat baserats på olika font betoningar, storlek och färger då temat fokuserar på att vara så minimalistisk som möjligt utan att ta bort någon information eller data.
+</p>
+<p>
+Tanken bakom temat är att det skall vara minimalistisk. Jag använder en kombination av interaktivitet och minimalism för att skapa ett anpassbart tema som avskärmar element som är mindre viktiga. På så sätt får man mer betoningar på den viktigare informationen.
+</p>
+</div>
+
+<h1 class="lg-heading" id="s">
+    Sass <span class="text-secondary">Kod</span> Struktur
+</h1>
+
+<h2 class="sm-heading">
+    Moduler <span class="text-secondary">&</span> Struktur &#8230;
+</h2>
+
+<h2 class="sm-heading" id="a">
+    Min uppdelning &#8230;
+</h2>
+
+<div class="block-me mt-n-9">
+<p>
+Min uppdelning av koden är säkerligen lite mer anurlunda än de andra som har lämnat in projekten då, jag aldrig använde mig av @desinax&#8217;s riktiga bas. Huvudtanken bakom hur jag har strukturerat mina moduler var att göra det så bra som möjligt för just detta projektet.
+</p>
+<p>
+En av de stösta anledningarna varför just min struktur känns bättre är för att för att jag inte använder mig av en massa onödiga moduler och kod som inte användstillsammans med, en massa onödiga variablar då min kod är mer intelligent. Saker som att bara ändra en variabel exempelvis den primära färgen kommer också att ändra olika värden som, vilken genomskilnighet vissa elenent får och vilken färg den primära fonten kommer till att ha. Med hjälp av detta kan man nästan skapa en helt ny upplevelse av att sätta huvudfärgen och accentfärgen. Självklart kommer inte detta att täcka allt med det gör en hel del.
+</p>
+<p>
+Som tidigare nämt innehåller konfigurationsfilen en hel del funktioner och mixins som alla filer använder sig av. För att då den mest konsistenta layouten för responsivitet finns det olika mixins som specifierar olika breakpoinst då elementen uppdateras. <span class="text-secondary">se bilden nedan</span>
+</p>
+
+<p>
+Utöver detta har jag också två stycken moduler i mappen <i>shared</i>. Dessa tar hand om att sätta all grundlayout som delas mellan båda teman då saker som färger, fonter, ikoner och några grids stylas. All den responsiva koden från <i>layout</i> sparas och skrivs in i <i>mobile</i> så att man lättare kan seperera koden för att undvika potentiella krockar. Filen innehåller även responsiv kod för navigationen samt footern då de delar på samma.
+</p>
+<p>
+Det är också mycket fokus på att klasser skall ärva från varanda så att man får mer kontroll över alla element och på det sättet undvika potentiella problem. <span class="text-secondary">se bilden ovan för exempel</span>
+</p>
+Anledningen till att jag valde <span class="text-secondary">Sass</span> över <span class="text-secondary">Less</span> är att sass har bättre syntax då saker som if-statser och for-loopar är mer likt de programmeringsspråk jag är van vid. Less är också lite mer restrikterande då den endast ger en möjligheten att använda mixins under specifika situationer.
+<p>
+Sass har också blivit mer dominant under de senaste åren då styleramverk som twitter bootstrap har bytt tillbaka till från just less till sass.
+</p>
+<p>
+Jag har känner mig också mer bekväm i prepossesorn som jag valde, då, jag har lekt mer med det i andra av mina projekt. Jag nämde tidigare att det inte fanns moduler till sass i desinax därför jobbade jag även med CSS grid samt lite flexbox för att mina element skall uppnå samma kännsla för ramverket gridlayout. Man får mycket mer kontroll med att jobba med de tekniker jag valde, just för att det inte finns samma mängd buggar och är mindre komplext. Jag känner personligen att man behöver kunna dessa saker för att kunna få jobb som en frontend frontendutvecklare och jag är inte ensam med att tycka det.
+</p>
+<p>
+Självklart så finns det också nackdelar med teknikerna och strukturen som jag har valt att använda. Varken <span class="text-secondary">flexbox</span> eller <span class="text-secondary">CSS grid</span> fungerar i de äldre webbläsarna som t.ex IE7 samt vissa versioner av browsers utvecklade för mobiler m.m.
+</p>
+<p>
+Strukturen för modulerna som jag har är bra och inte överkompliserade för detta projektet. Dock så är de inte kanske de mest optimala om man t.ex skall återanvända all <span class="text-secondary">scss</span> kod till något annat projekt. Men med att flytta över <b>hudkoden</b> för både footern och navigationen kan man i alla fall snabbt komma åt det viktigaste.
+</p>
+</div>
+";}}}s:11:"frontmatter";a:2:{s:5:"titel";s:2:"Om";s:5:"title";N;}}
